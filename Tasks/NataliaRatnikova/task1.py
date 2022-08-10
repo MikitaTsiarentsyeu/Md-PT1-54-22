@@ -1,5 +1,4 @@
 import decimal
-
 deposit_sum = decimal.Decimal(input("Please enter the sum of your deposit:\n"))
 deposit_term = decimal.Decimal(input("Please enter the term of your deposit(years):\n"))
 deposit_percent = decimal.Decimal(input("Please enter the percent of your deposit(for 1 year):\n"))
