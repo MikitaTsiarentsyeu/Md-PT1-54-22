@@ -26,11 +26,11 @@ def decimalization(txt):
         if x_in_dec <= 0:
             raise MyError("The number must be greater than 0. Try again")
         return x_in_dec
-    except ValueError:
-        print("The number is not correct. Try again")
-        return decimalization(txt)
     except MyError:
         print("The number must be greater than 0. Try again")
+        return decimalization(txt)
+    except:
+        print("The number is not correct. Try again")
         return decimalization(txt)
 
 
