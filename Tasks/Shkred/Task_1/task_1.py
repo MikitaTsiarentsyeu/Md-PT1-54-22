@@ -4,6 +4,8 @@ def validate_input(text, type):
     flag = False
     while not flag:
         inp = input(text +'\n')
+        if inp[0]=='-':
+            continue
         try: 
             if type == 'int': 
                 result = int(inp)
@@ -17,9 +19,9 @@ def validate_input(text, type):
     return result
 
 while True:
-    initial_deposit_amount = validate_input("Enter the deposit amount:",'Decimal')
-    period = validate_input("Enter the required period in years:",'int')
-    percentage = validate_input("Enter the annual percentage:",'Decimal')/100  
+    initial_deposit_amount = validate_input("Enter the deposit amount:", "Decimal")
+    period = validate_input("Enter the required period in years:", "int")
+    percentage = validate_input("Enter the annual percentage:", "Decimal")/100  
     monthly_capitalization = input("Enter Y to enable monthly capitalization or press the enter button:\n")
 
     if monthly_capitalization.upper() == 'Y':
