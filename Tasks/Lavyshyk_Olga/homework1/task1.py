@@ -1,6 +1,7 @@
-sum1 = int(input("Enter deposit amount = "))
-y = int(input("Enter number of years = "))
-N = float(input("Annual interest = "))
+import decimal
+sum1 = decimal.Decimal(input("Enter deposit amount = "))
+y = decimal.Decimal(input("Enter number of years = "))
+N = decimal.Decimal(input("Annual interest = "))
 t = input("Include monthly capitalization answer yes or no -> ").lower()
 i = y*12
 if t == "yes":
