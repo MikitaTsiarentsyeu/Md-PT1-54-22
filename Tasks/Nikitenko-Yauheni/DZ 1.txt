@@ -1,0 +1,20 @@
+import decimal
+
+print("To start the survey you have to give your data.\nIf you want to do this select 'Yes', if not then 'no'")
+info = 0
+while info == 0:
+  decision = str(input("Decision: "))
+  info +=1
+  if decision == "Yes":  
+    input('Please, enter the initial deposit amount, BYN: \n')
+  term = decimal.Decimal(input('how long do you need these money(max 5 years): '))
+  rate = decimal.Decimal(input('how many percents will? '))    
+cap = int(input('I can also offer you to include a annualy capitalization if you want it write "2" if no write "1"'))
+if cap == 2:
+    total = amount * (1 + rate/100*term)
+    print(f'Annualy capitalization total: {total:.2f} BYN')
+    info +=1
+elif cap == 1:
+  print("Thank you for the information.")
+  info +=1
+  
