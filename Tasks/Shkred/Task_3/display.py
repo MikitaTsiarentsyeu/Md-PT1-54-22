@@ -57,3 +57,4 @@ def time_in_russian(hh, mm):
                 print(clock_words["minits"][-1] + time_selector[60 - minits_60][3] + clock_words["minits"][2] + "час")
             else:
                 print(clock_words["minits"][-1] + time_selector[60 - minits_60][3] + clock_words["minits"][2] + time_selector[hours_12 + 1][0])
+                
