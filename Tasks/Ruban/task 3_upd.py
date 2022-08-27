@@ -115,7 +115,7 @@ if prmode == 'manual':
             print("The hour value is incorrect, please try again")
             continue
         if minute < 0 or minute > 59:
-            print("The hour value is incorrect, please try again")
+            print("The minute value is incorrect, please try again")
             continue
         break
     if 11<hour<24:
