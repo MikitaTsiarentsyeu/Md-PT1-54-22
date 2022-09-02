@@ -50,9 +50,9 @@ def split_lines_length(q, lst):
             spaces_missing = q - my_textwrap.len_elem(i)
             for k in range(spaces_missing):
                 ind_random = int(random.randrange(1, len(i) - 1, 2))
-                i[ind_random] += ' '
+                i.insert(ind_random, ' ')
     return lst_line
-# is here concatenation harmful as well (from the point of view of used memory)?
+
 
 
 lst = text_download('text.txt')
