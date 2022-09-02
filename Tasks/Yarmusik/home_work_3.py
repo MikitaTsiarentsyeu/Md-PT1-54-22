@@ -123,7 +123,7 @@ elif your_option == '2':
                             out_min = number_tens[40]
 
                             out_min_split = number_ones[60 - int((split_time[1]))]
-                            print(f'без {out_min_split[2]} минут {out[1]}')
+                            print(f'без {out_min_split[1]} минут {out[1]}')
 
                         elif 50 <= int(min) <= 59:
                             if int(hour) == 12:
