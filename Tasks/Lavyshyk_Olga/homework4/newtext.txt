@@ -1,0 +1,67 @@
+The   February   TIOBE   Index  of  the  most
+most   programming   languages  is  out,  and
+and  the  work  going on in the background of
+of  calculations  has  changed,  not much has
+has   in   the   way   of   rankings.  Python
+Python  to  sit  atop  the  index, with C and
+and  directly  behind it. In Feb. 2021, those
+those  also  occupied  the top spot, but with
+with  in  the  number  three  position,  C at
+at  and  Java in second place. Beyond the top
+top  there  hasn’t  been  much  movement in
+in  index,  with positions four through eight
+eight  from  the  same  time last year. Those
+Those  are  occupied,  respectively,  by C++,
+C++,   Visual   Basic,  JavaScript  and  PHP.
+PHP.  nine  and  10  swapped  from Feb. 21 to
+to   with   Assembly  Language  and  SQL  now
+now  each  other’s  positions.  The one big
+big  of  note between Feb. 2021 and Feb. 2022
+2022  with  the  Groovy programming language,
+language,    object-oriented   language   for
+for  Over  the  course  of  the  year, Groovy
+Groovy  from  12th  position  all  the way to
+to   putting   it  perilously  close  to  the
+the   programming  languages”  list.  TIOBE
+TIOBE   Paul   Jansen  attributes  Groovy’s
+Groovy’s   to   the  growth  in  the  CI/CD
+CI/CD  Groovy  was the only language used for
+for   scripts   on   Jenkins,   which  Jansen
+Jansen   as  having  been  “the  only  real
+real  in  the  CI/CD domain” early on. Now,
+Now,  platforms  that don’t require Groovy,
+Groovy,  GitHub,  Azure  DevOps  and  GitLab,
+GitLab,  is  losing  its  place at the table.
+table.  could  have  grown further because it
+it  the  major  script-based  alternative for
+for   running   on  the  same  JVM.  However,
+However,  is  taking over that position right
+right  so  I  think  Groovy  will have a hard
+hard  Jensen  said.  The  TIOBE index may not
+not   full   of  surprises  this  month,  but
+but  did  have  a  lot to say about the index
+index  this  month, as this is the first time
+time  has  been compiled using Similarweb’s
+Similarweb’s  analysis  platform instead of
+of  “We  have used Similarweb for the first
+first  this  month  to  select search engines
+engines   fortunately,   there   are  no  big
+big  in  the index due to this swap. The only
+only   difference   is   that   the   top   3
+3  Python,  C, and Java, all gained more than
+than   percent  in  the  rankings,”  Jansen
+Jansen  TIOBE  decided  to  make  the  switch
+switch  month  after  Amazon’s announcement
+announcement   December   2021  that  it  was
+was  the  Alexa  web  ranking  service  down,
+down,  May  1,  2022,  ending 25 years of the
+the  Jansen  noted that not every website has
+has   onboarded,   but  that  the  switch  to
+to  included  a  switch  to using HtmlUnit, a
+a  web  browser  with APIs that let Java apps
+apps   pages,   fill   forms   and  do  other
+other  web  browsing  activity.  This  switch
+switch  eventually  allow  TIOBE  to  include
+include  it  was unable to crawl before, like
+like  and  Github,  which could have a larger
+larger on scores. 
