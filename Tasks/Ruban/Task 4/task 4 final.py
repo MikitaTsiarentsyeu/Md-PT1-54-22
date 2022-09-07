@@ -12,13 +12,13 @@ with open("text.txt", 'r', encoding='utf8') as f:
     s = f.read()
 
 m = list(s.split('\n'))             #list of paragrhaphs
-listfinal = []                      #final unformatted list 
+listfinal = []                      #final unformatted list of lists of paragraphs splitted by strings
 listform = []                       #final formatted list
 
 for i in range(len(m)):
     strg = m[i]
     lenres = len(strg)
-    liststrg = []                   #list of lists by paragraphs
+    liststrg = []                   #list of paragraph strings
     while lenres > 0:
         if len(strg) >= mxsym:
             ind = strg.rfind(' ', 0, mxsym) + 1
