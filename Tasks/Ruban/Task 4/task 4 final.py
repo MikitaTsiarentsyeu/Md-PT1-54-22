@@ -26,7 +26,7 @@ for i in range(len(m)):
             s1 = s1.rstrip()      
             liststrg.append(s1)
             strg = strg[ind:]        
-        elif len(strg) < mxsym:
+        elif 0 < len(strg) < mxsym:
             liststrg.append(strg)
             strg = ''
         lenres -= ind
