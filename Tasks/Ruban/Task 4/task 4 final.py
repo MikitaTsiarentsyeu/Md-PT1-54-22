@@ -4,12 +4,13 @@ while True:
         print('Incorrect input. Please try again')
     else: 
         mxsym = int(mxsym)    
-        if int(mxsym) < 36:
+        if mxsym < 36:
             print('Minimum number of characters is 36. Please try again')
         else:    
             break        
 with open("text.txt", 'r', encoding='utf8') as f:
     s = f.read()
+    f.close()
 
 m = list(s.split('\n'))             #list of paragrhaphs
 listfinal = []                      #final unformatted list of lists of paragraphs splitted by strings
