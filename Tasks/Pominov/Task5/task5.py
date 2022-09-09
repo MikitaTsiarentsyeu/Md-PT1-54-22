@@ -29,17 +29,13 @@ check_str('The quick Brown Fox')  # -> '3 upper case, 13 lower case'
 
 
 def is_prime(nmbr):
-    div_num = 0
     if nmbr < 2:
         return False
-    elif nmbr == 2:
-        return True
     else:
-        for i in range(3, round(nmbr**0.5) + 1, 2):
-            if div_num == 0:
-                if nmbr % i == 0:
-                    div_num += 1
-        return (div_num == 0)
+        for i in range(2, int(nmbr**0.5+1)):
+            if nmbr % i == 0:
+                return False
+        return True
 
 
 print(is_prime(787))  # -> True
