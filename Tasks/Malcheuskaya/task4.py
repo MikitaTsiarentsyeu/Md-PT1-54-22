@@ -10,9 +10,9 @@ while True:
         print("Error: enter number over 35!")
         continue
     try:
-        with open("text.txt", "r") as file:
+        with open("text.txt", "r", encoding = "utf8") as file:
             textList =[] 
-            for i in file.read().replace("вЂ™", "'").replace('вЂњ', '"').replace('вЂќ', '"').split("\n"): 
+            for i in file.read().split("\n"): 
                 lineList = [] 
                 line = "" 
                 for j in i.split(" "): 
@@ -29,8 +29,8 @@ while True:
                     lineList[j] = lineList[j].replace(" " * numOfSpaces, " " * (numOfSpaces + 1), maxNum - len(lineList[j])) #увеличение пробелов для окончательного выравнивания
                     j += 1 
                 textList.append(lineList) 
-    except:
-        print("Error: no such file: 'text.txt'")
+    except BaseException as err:
+        print("Error:", err)
         break
 
     text = "" 
