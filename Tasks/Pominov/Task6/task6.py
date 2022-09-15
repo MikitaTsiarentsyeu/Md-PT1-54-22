@@ -19,12 +19,7 @@ print(list_sum([1, 2, [2, 4, [[7, 8], 4, 6]]]))  # -> 34
 def fib(n):
 
     def fib_number(n):
-        if n == 0:
-            return 0
-        elif n == 1:
-            return 1
-        else:
-            return fib_number(n - 1) + fib_number(n - 2)
+        return n if n in (0, 1) else fib_number(n - 1) + fib_number(n - 2)
 
     print(*[fib_number(i) for i in range(n)], sep=",")
 
