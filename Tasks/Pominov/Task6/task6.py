@@ -16,11 +16,11 @@ def list_sum(lst):
 print(list_sum([1, 2, [2, 4, [[7, 8], 4, 6]]]))  # -> 34
 
 
+def fib_number(n):
+    return n if n in (0, 1) else fib_number(n - 1) + fib_number(n - 2)
+
+
 def fib(n):
-
-    def fib_number(n):
-        return n if n in (0, 1) else fib_number(n - 1) + fib_number(n - 2)
-
     print(*[fib_number(i) for i in range(n)], sep=",")
 
 
@@ -31,12 +31,7 @@ fib(10)  # -> 0,1,1,2,3,5,8,13,21,34
 # quick fibonacci list without recursion
 def quick_fib(n, lst=[]):
     for i in range(n):
-        if i == 0:
-            lst.append(0)
-        elif i == 1:
-            lst.append(1)
-        else:
-            lst.append(lst[i - 1] + lst[i - 2])
+        lst.append(i) if i in (0, 1) else lst.append(lst[i - 1] + lst[i - 2])
     print(*lst, sep=",")
 
 
