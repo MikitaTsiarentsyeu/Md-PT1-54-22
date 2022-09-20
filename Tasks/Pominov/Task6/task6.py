@@ -10,7 +10,7 @@
 
 
 def list_sum(lst):
-    return sum(map(lambda x: list_sum(x) if type(x) == list else x, lst))
+    return sum(map(lambda x: list_sum(x) if type(x) is list else x, lst))
 
 
 print(list_sum([1, 2, [2, 4, [[7, 8], 4, 6]]]))  # -> 34
