@@ -1,0 +1,65 @@
+h2 {
+    color: blue;
+}
+
+a {
+    color: darksalmon;
+}
+
+a:visited {
+    color: darksalmon;
+    text-decoration-line: none;
+}
+
+.red-text {
+    color: red !important;
+}
+
+#very-important-element {
+    color: purple;
+}
+
+#header {
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#content {
+    background-color: cyan;
+    display: flex;
+    justify-content: center;
+}
+
+#footer {
+    background-color: darkslategray;
+    display: flex;
+    justify-content: center;
+}
+
+#logo {
+    font-family: cursive;
+    margin-left: 5%;
+}
+
+#registration {
+    margin-top: 3%;
+    margin-right: 1%;
+}
+
+#left-content {
+    background-color: darkblue;
+    width: 20%;
+}
+
+#center-content {
+    background-color: brown;
+    width: 60%;
+}
+
+#right-content {
+    background-color: hotpink;
+    width: 20%;
+}
