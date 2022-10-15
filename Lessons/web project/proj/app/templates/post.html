@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <div>
+            {% if post %}
+                <h1>{{ post.title }}</h1>
+                <h3>{{ post.subtitle }}</h3>
+                {% if post.image %}
+                    <img src="{{ post.image.url }}" />
+                {% endif %}
+                <p>by {{ post.author.name }}</p>
+            {% else %}
+                <h3>we cannot find the post you're looking for</h3>
+            {% endif %}
+        </div>
+    </body>
+</html>
