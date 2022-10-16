@@ -1,0 +1,35 @@
+.structure {
+    width: 60%; 
+    margin: 0 auto;
+}
+
+.main-structure {
+    background-color: #ccc; 
+    display:flex;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.center {
+    justify-content: center;
+}
+
+.item {
+    border-bottom: dotted 2px #ccc; 
+    padding-bottom: 5%;
+}
+
+.item-image {
+    width: 80%;
+}
+
+#logo {
+    padding-left: 3rem;
+    font-family: cursive;
+}
+
+#buttons {
+    padding-top: .5rem;
+}

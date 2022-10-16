@@ -1,7 +1,9 @@
+import datetime
 import re
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import Post
+from .models import Author, Post
+from .forms import AddPost
 
 
 def home(request):
@@ -24,7 +26,7 @@ def home(request):
 #     return HttpResponse(response)
 
 def posts(request):
-    all_posts = Post.objects.all()
+    all_posts = Post.objects.all().order_by('-issued')
     return render(request, 'posts.html', {'posts': all_posts})
 
 def post(request, id):
@@ -33,3 +35,26 @@ def post(request, id):
     except:
         post = ""
     return render(request, 'post.html', {'post': post})
+
+def add_post(request):
+
+    if request.method == 'POST':
+        new_form = AddPost(request.POST, request.FILES)
+
+        if new_form.is_valid():
+            post = Post()
+            post.author = Author.objects.all()[0]
+            post.issued = datetime.datetime.now()
+            post.title = new_form.cleaned_data['title']
+            post.subtitle = new_form.cleaned_data['subtitle']
+            post.content = new_form.cleaned_data['content']
+            post.post_type = new_form.cleaned_data['post_type']
+            post.image = new_form.cleaned_data['image']
+            post.save()
+
+            return redirect('posts')
+            
+    elif request.method == "GET":
+        new_form = AddPost()
+
+    return render(request, 'add_post.html', {'new_form': new_form})

@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet main-structure" href="{% static 'app/css/style.css' %}">
+    </head>
+    <body>
+        <div class="structure main-structure space-between">
+            <a href="{% url 'posts' %}">
+                <h1 id="logo">MyBlog</h1>
+            </a>
+            <div id="buttons">
+                <a href="#">Login?</a>
+                <a href="{% url 'add_post' %}">Create post</a>
+            </div>
+        </div>
+        <div class="structure">
+            {% block content %}
+            {% endblock  %}
+        </div>
+        <div class="structure main-structure center">
+            <p>powered by Django</p>
+        </div>
+    </body>
+</html>
