@@ -3,6 +3,10 @@
     margin: 0 auto;
 }
 
+.fix-mim-height {
+    min-height: 750px;
+}
+
 .main-structure {
     background-color: #ccc; 
     display:flex;
@@ -32,4 +36,8 @@
 
 #buttons {
     padding-top: .5rem;
+}
+
+.login-form-input {
+    margin-bottom: 10px;
 }

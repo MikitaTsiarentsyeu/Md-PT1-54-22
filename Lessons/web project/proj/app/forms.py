@@ -19,3 +19,9 @@ class AddPost(forms.Form):
             raise ValidationError("The title and subtitle values should be different")
 
         return sub_data
+
+class AddPostModelForm(forms.ModelForm):
+
+    class Meta:
+        model = Post
+        fields = ("title", "subtitle", "content", "image", "post_type")
