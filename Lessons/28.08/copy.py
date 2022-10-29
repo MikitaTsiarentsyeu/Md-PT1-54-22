@@ -1,14 +1,12 @@
-chunk_size = 100
+chunk_size = 40
 counter = 0
 
-with open("69561.jpg", 'rb') as donor:
-    with open("test.jpg", 'wb') as recepient:
+with open("text.txt", 'r') as donor:
+    with open("text_new.txt", 'w') as recepient:
         while True:
             chunk = donor.read(chunk_size)
             if chunk:
-                counter += 1
-                print(counter)
-                recepient.write(chunk)
+                recepient.write(chunk + '\n')
             else:
                 break
 
