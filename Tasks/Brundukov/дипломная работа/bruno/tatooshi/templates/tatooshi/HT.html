@@ -1,0 +1,216 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title  %}TAMANATATOO{% endblock title %} </title>
+    <link rel="stylesheet" href="{% static 'tatooshi/css/SIS4.css' %}">
+    <script src="{% static 'tatooshi/js/JSBR.js' %}" defer></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+</head>
+<body>
+
+
+
+    {% block higthblock %}
+
+        <div class="container">
+         <div class="wrapper">
+            <input type="checkbox" id="check-menu">
+            <label for="check-menu">NAVIGATION</label>
+            <nav class="main-menu">
+                <a href="{% url 'home' %}"><i class="fas fa-home"></i>  Главная</a>
+                <a href="{% url 'zayavka' %}"><i class="fa-regular fa-comment"></i>  оставить заявку</a>
+                <a href="{% url 'Soc.seti' %}"><i class="fa-solid fa-paper-plane"></i>  соц.сети</a> 
+                <a href="{% url 'otzyv' %}"><i class="fa-solid fa-thumbs-up"></i>  отзывы</a>
+      
+            </nav>
+
+        </div>
+    {% endblock higthblock %}
+
+
+
+    <div class="navbar-text">
+        <a href="{% url 'register' %}">РЕГИСТРАЦИЯ</a><a href="{% url 'login' %}">ВХОД</a>
+        
+    </div>
+
+    <div class="error">
+        {% if messages %}
+
+            {% for message in messages %}
+                {% if message.tags == 'error' %}
+                <div class= "error">
+                    {{message}}
+                </div>
+            {% else %} 
+                <div class= 'alert alert-{{message.tags}}'>
+
+                </div>
+            {% endif %}
+        {% endfor %}
+        
+        {% endif %}
+    </div>
+
+
+
+
+
+
+    {% block midleblock %}
+        <section class="galary">
+
+            <div class="frame frame_bg">
+                <div class="frame-content">
+                    <h2>tamana tattoo</h2>
+                </div>
+            </div>
+            <div class="frame"></div>
+            <div class="frame ">
+                <div class="frame__content text-right">
+                    <h3>ВЫБОР ТАТУ</h3>
+                    <p>Часто к мастеру приходят, уже точно зная,
+                         какую татуировку набить. Но бывает и так,
+                          что тату ну очень хочется, а со стилем и цветом
+                           определиться никак не получается. Трудности часто 
+                           вызывает выбор цветовой гаммы, а именно: черно-белая 
+                           это будет татуировка или цветная? 
+                    </p>
+                </div>
+            </div>
+            
+        
+            <div class="frame frame-media_right">
+                <div class="frame__content">
+                    <div class="frame-media" style="background-image:url({% static 'tatooshi/img/050219-1749-3926.jpg' %})"></div>
+                </div>
+            </div>
+        
+            <div class="frame">
+                <div class="frame__content text-left">
+                    <h3>зачем тату??</h3>
+                    <p>Татуировки возникли еще в древние времена, когда у каждого племени был свой рисунок.И чтобы показать принадлежность к тому или иному племени, делались татуировки. В средние века тату были под запретом, потому как считались языческим обрядом, но даже тогда кульура татуировок не исчезала. Сейчас татуировки больше относят к искусству, моде и эстетическому украшению тела.</p>
+                </div>
+            </div>
+            
+
+            <div class="frame frame_bg">
+                <div class="frame__content ">
+                    <video class="frame-media frame-media_left" src="{% static 'tatooshi/media/Tattooing Close Up in 4K Slow Motion.mp4' %}" autoplay loop muted></video>
+                    
+                </div>
+            </div>
+
+
+
+            <div class="frame frame_bg"></div>
+
+
+            <div class="frame">
+                <div class="frame__content text-left">
+                    <h3>Побочки</h3>
+                    <p>Многие люди, желающие украсить свое тело татуировкой, спрашивают, может ли она вызвать рак кожи или какой-то другой анатомической структуры. Здесь нужно сразу уточнить, что сама по себе тату не является канцерогеном – речь может идти только о том, что механическое воздействие на кожу иглой и введение пигмента могут ослаблять иммунитет и раздражать клетки и ткани. И если они уже чем-то поражены (например, родинками), определенные риски развития рака существуют. 
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="frame frame-media_left">
+                <div class="frame__content">
+                    <div class="frame-media" style="background-image:url({% static 'tatooshi/img/vse-o-muzhskih-tatu-v-vide-lva-na-grudine-25.jpg' %})"></div>
+                </div>
+            </div>            
+
+
+
+
+          
+            
+
+            <div class="frame frame-frame-media_left">
+                <div class="frame__content">
+                    <div class="frame-media" style="background-image:url({% static 'tatooshi/img/tild6134-6337-4363-b630-666535323361__275120409_5482302565.jpeg' %})"></div>
+                </div>
+            </div>
+
+            <div class="frame ">
+                <div class="frame__content text-left">
+                    <h3>размер тату 
+                    </h3>
+                    <p>Один из первых моментов, который клиент спешит обговорить с мастером, – это размеры будущей тату в см. Почему это важно? У каждого свои причины:
+
+                        Чем больше рисунок, тем дольше и болезненнее будет сеанс.
+                        Большие рисунки стоят дороже. Подробнее о ценообразовании – в нашем разделе «Стоимость татуировки в зависимости от размера».
+                        Если эскиз разонравится, нелюбимое тату все равно будет на виду из-за крупного объема.
+                        Мелкие тату проще скрыть от консервативной бабушки или строгого работодателя.
+                        Огромные тату считаются более крутыми и продвинутыми.
+                        Вы будете удивлены, но мастер назовет вам и другие факторы, влияющие на выбор размера будущей татуировки.</p>
+                </div>
+            </div>
+
+            
+                
+            <div class="frame frame-media_left frame_bg">
+                <div class="frame-content">
+                    <video class="frame-vid " src="{% static 'tatooshi/media/Tattoo B-Roll _ Cinematic video _ реклама тату мастера.mp4' %}" autoplay loop muted>
+                    </video>
+                </div>
+            </div>
+            <div class="frame frame_bg"></div>
+
+      
+            
+            <div class="frame ">
+                <div class="frame__content text-right">
+                    <h3>роль в жизни</h3>
+                    <p>Нанесение нательных изображений – древний способ быстро и доступно предоставить информацию об их владельце. Татуировки обозначали принадлежность человека к определенному племени, роду, его статус, семейное положение и другие важные сведения. Такие рисунки, помимо практического, часто носили символический смысл. В древние времена люди верили, что правильно выбранные тату оказывают положительное влияние на судьбу: усиливают энергетику, защищают от злых сил, привлекают счастье и удачу. Они считали, что знак, символ или надпись могут изменить судьбу не только самого владельца рисунка, но и его семьи или даже рода.</p>
+                </div>
+            </div>
+ 
+            
+            <div class="frame frame-media_right">
+                <div class="frame__content">
+                    <div class="frame-media" style="background-image:url({% static 'tatooshi/img/edd45452.jpg' %})"></div>
+                </div>
+            </div>
+
+            <div class="frame frame_bg"></div>
+
+            <div class="frame">
+                <div class="frame__content text-left">
+                    <h3> смысл</h3>
+                    <p>Некогда искусство тату считалось уделом шаманов и заключенных, теперь же оно стало 
+                        частью массовой культуры. Все больше людей пользуется открывшейся возможностью разукрасить тело,
+                         однако не каждый относится к этому процессу серьезно.
+                         Опрометчивость для многих заканчивается самобичеванием.  </p>
+                </div>
+            </div>
+            
+
+            <div class="frame frame-media_left ">
+                <div class="frame__content">
+                    <div class="frame-media" style="background-image:url({% static 'tatooshi/img/delat-tatuirovku-v-etih-mestah-bolnee-vsego-spisok-uyazvimyh-mest-1.jpg' %})"></div>
+                    
+                </div>
+            </div>
+
+            <div class="frame">
+                <div class="frame-content"> ♥SUOTAMANA 2022♥</div>
+                
+            </div>
+        </section>
+    
+    
+{% endblock midleblock %}  
+
+    <img src="{% static 'tatooshi/img/tumblr_oyjk1cpdef1w3y4ilo1_500.gif' %}" alt="alt" class="soundbutton">
+    <audio class="audio" src="{% static 'tatooshi/media/ambient.mp3' %}"loop autoplay></audio>
+</div>
+<script src="https://kit.fontawesome.com/6fcb1fe829.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{% extends 'tatooshi/HT.html' %}
+
+
+
+
+{% block hidthblock %}{% endblock hidthblock %}
+{% block title %}{{title}}{% endblock title %} 
+{% block midleblock %}
+   <div class="prtext">
+    <h1>РЕГИСТРАЦИЯ НА НАШЕМ САЙТЕ</h1>
+
+
+   </div>
+   <div class="formatreg">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p}}
+            <button>ЗАРЕГЕСТРИРОВАТЬСЯ</button>
+        </form>
+
+
+
+   </div>
+
+ 
+ {% endblock midleblock %}

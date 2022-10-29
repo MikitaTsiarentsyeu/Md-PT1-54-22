@@ -1,0 +1,33 @@
+
+{% extends 'tatooshi/HT.html' %}
+
+
+
+
+{% block hidthblock %}{% endblock hidthblock %}
+{% block title %}OTZYV{% endblock title %} 
+{% block midleblock %}
+    
+    <div class="features">
+        <h1>наши отзывы</h1>
+        {%if otzyv%}
+            {% for el in otzyv %}
+                <div class="action-counter">
+                    <h3>{{ el.title }}</h3>
+                    <p>{{el.anons}}</p>
+                    <p>{{el.full_text}}</p>
+                </div>
+            {% endfor %} 
+        {%else%}  
+            <p>У вас нет записей</p>
+        {%endif%}
+         
+
+        {# Коментарий#}
+        <button class='btn btn-warning'>На главную страницу</button>
+        <form action="otzyv" method="post">
+            <input type="text" placeholder='НАЗВАНИЕ СТАТЬИ'class="form-control">
+        </form>
+    </div>
+
+ {% endblock midleblock %}
